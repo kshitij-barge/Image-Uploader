@@ -1,30 +1,32 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Image Uploader</title>
-    <link rel="stylesheet" href="/styles.css" />
-  </head>
-  <body>
-    <div class="container">
-      <form action="/upload" method="POST" enctype="multipart/form-data">
-        <div class="form-group">
-          <input type="file" name="file" id="file-input" />
-        </div>
-        <div class="form-group">
-          <input type="submit" value="upload" />
-        </div>
-      </form>
-    </div>
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Image Uploader</title>
+  <link rel="stylesheet" href="/styles.css" />
+</head>
+<body>
+  <div class="container">
+    <h1>Upload an Image</h1>
+    <form action="/upload" method="POST" enctype="multipart/form-data">
+      <input type="file" name="file" required />
+      <button type="submit">Upload</button>
+    </form>
+  </div>
 
-    <div id="uploaded-image-container">
-      <% if(url) { %>
-      <h2>File Uploaded Successfully</h2>
-      <div class="image-wrapper">
-        <img src="<%= url %>" alt="Uploaded Image" />
-      </div>
-      <% } %>
+  <div class="gallery">
+    <h2>Uploaded Images</h2>
+    <div class="image-grid">
+      <% images.forEach(image => { %>
+        <div class="image-card">
+          <img src="<%= image.imgUrl %>" alt="Uploaded Image" />
+          <form action="/delete/<%= image._id %>" method="POST">
+            <button type="submit" class="delete-btn">Delete</button>
+          </form>
+        </div>
+      <% }) %>
     </div>
-  </body>
+  </div>
+</body>
 </html>
