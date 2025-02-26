@@ -94,3 +94,28 @@ form {
   transform: scale(1.05);
   box-shadow: 0 0 15px #64ffda, 0 0 40px #64ffda;
 }
+
+/* Uploaded Image Container */
+#uploaded-image-container {
+  margin-top: 20px;
+  text-align: center;
+}
+
+/* Ensure images do not overflow */
+#uploaded-image-container img {
+  max-width: 100%; /* Ensures the image fits within the container */
+  max-height: 400px; /* Limits height to avoid disturbing the layout */
+  width: auto; 
+  height: auto; 
+  border-radius: 8px;
+  margin-top: 10px;
+  box-shadow: 0 4px 10px rgba(100, 255, 218, 0.2);
+  transition: 0.3s;
+  object-fit: contain; /* Keeps aspect ratio */
+}
+
+/* On hover, give a subtle zoom effect */
+#uploaded-image-container img:hover {
+  transform: scale(1.05);
+  border: 0 0 15px #64ffda, 0 0 40px #64ffda;
+}
