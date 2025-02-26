@@ -1,0 +1,96 @@
+/* General Styles */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Poppins', sans-serif;
+}
+
+body {
+  background-color: #0a192f; /* Deep Navy Blue */
+  color: #ccd6f6; /* Light Blue for readability */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  flex-direction: column;
+  padding: 20px;
+}
+
+/* Card Container */
+.container {
+  background: #112240; /* Dark Blue */
+  padding: 25px;
+  border-radius: 12px;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3);
+  width: 400px;
+  text-align: center;
+  border: 2px solid #64ffda; /* Cyan Border */
+}
+
+/* Form Styling */
+form {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+/* File Input */
+.form-group input[type="file"] {
+  border: 2px dashed #64ffda; /* Cyan border */
+  background-color: rgba(100, 255, 218, 0.1);
+  padding: 12px;
+  border-radius: 8px;
+  cursor: pointer;
+  text-align: center;
+  color: #64ffda;
+  transition: 0.3s;
+}
+
+.form-group input[type="file"]:hover {
+  background-color: rgba(100, 255, 218, 0.2);
+}
+
+/* Upload Button */
+.form-group input[type="submit"] {
+  background: #64ffda; /* Neon Cyan */
+  color: #0a192f; /* Dark background for contrast */
+  border: none;
+  padding: 12px;
+  border-radius: 8px;
+  cursor: pointer;
+  font-size: 16px;
+  font-weight: bold;
+  text-transform: uppercase;
+  box-shadow: 0 0 5px #64ffda, 0 0 10px #64ffda;
+  transition: all 0.4s ease-in-out;
+} 
+
+.form-group input[type="submit"]:hover {
+  background: #0a192f;
+  color: #64ffda;
+  box-shadow: 0 0 20px #64ffda, 0 0 60px #64ffda;
+}
+
+/* Uploaded Image Styling */
+#uploaded-image-container {
+  margin-top: 20px;
+  text-align: center;
+}
+
+#uploaded-image-container h2 {
+  color: #64ffda;
+}
+
+#uploaded-image-container img {
+  max-width: 100%;
+  border-radius: 8px;
+  margin-top: 10px;
+  box-shadow: 0 4px 10px rgba(100, 255, 218, 0.2);
+  transition: 0.3s;
+}
+
+#uploaded-image-container img:hover {
+  transform: scale(1.05);
+  box-shadow: 0 0 15px #64ffda, 0 0 40px #64ffda;
+}
